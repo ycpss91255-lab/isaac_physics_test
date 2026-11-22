@@ -4,7 +4,7 @@
 > The 4-layer separation and the scene-YAML idea survive as the mounted `isaac_devkit`
 > module set, the three-file scene, and the sensor catalog/placement schema (ADR-0017
 > sections 3-5 and the "From ADR-0010" restatement). This file is retained unmodified below
-> as the historical record and migrates to `ycpss91255-research/isaac-forklift` together
+> as the historical record and migrates to `ycpss91255-lab/isaac-forklift` together
 > with the application content it exemplifies (tracked in #136).
 
 4 individual driver scripts, multiple robot/object USD models, and a single-sensor-type camera setup (ADR-0006) have grown organically without a unifying framework. Adding new robots (MR12, MR1533), environment objects (push-back with sliding joint, pallet with color variants), and additional sensor types (3D/2D LiDAR, IMU) under the current ad-hoc approach would multiply copy-paste boilerplate and create inconsistent conventions across the workspace.
@@ -205,7 +205,7 @@ Two dimensions:
 - **ADR-0008**: L2/L3 physics level vocabulary -- sensor mount rules reference these physics levels
 - **ADR-0009**: IsaacDriver base class lifecycle-only pattern -- L4 foundation; Scene YAML integration extends the `run()` lifecycle
 - **ycpss91255/isaac#23**: IsaacDriver implementation (L4, in progress)
-- **ycpss91255-docker/isaac#28**: Docker stage consolidation (closed, provides `ISAAC_LIVESTREAM` env var that `IsaacDriver.create_sim_app()` reads)
+- **ycpss91255-lab/isaac#28**: Docker stage consolidation (closed, provides `ISAAC_LIVESTREAM` env var that `IsaacDriver.create_sim_app()` reads)
 
 ## Future considerations (not decided, deferred)
 

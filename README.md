@@ -2,7 +2,7 @@
 
 **[English](README.md)** | **[繁體中文](doc/readme/README.zh-TW.md)** | **[简体中文](doc/readme/README.zh-CN.md)** | **[日本語](doc/readme/README.ja.md)**
 
-Isaac Sim physics experiments and forklift-specific control scripts extracted from [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac) per the repo split ([isaac#309](https://github.com/ycpss91255-docker/isaac/issues/309)).
+Isaac Sim physics experiments and forklift-specific control scripts extracted from [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac) per the repo split ([isaac#309](https://github.com/ycpss91255-lab/isaac/issues/309)).
 
 This repo holds:
 
@@ -16,9 +16,9 @@ This repo holds:
 
 ## Prerequisites
 
-These scripts run **inside the Isaac Sim container** built from [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac). The container provides Isaac Sim 6.2.0, Isaac Lab v3.0.0, and the `isaac_devkit` framework.
+These scripts run **inside the Isaac Sim container** built from [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac). The container provides Isaac Sim 6.2.0, Isaac Lab v3.0.0, and the `isaac_devkit` framework.
 
-Robot models (USD) live in the private [`ycpss91255-docker/robot_model`](https://github.com/ycpss91255-docker/robot_model) repo. The forklift block model USD is at `usd/origin/forklift_blocky/` in that repo; the openbase models are at `usd/origin/omwr/` and `usd/origin/openbase/`.
+Robot models (USD) live in the private [`ycpss91255-lab/robot_model`](https://github.com/ycpss91255-lab/robot_model) repo. The forklift block model USD is at `usd/origin/forklift_blocky/` in that repo; the openbase models are at `usd/origin/omwr/` and `usd/origin/openbase/`.
 
 ## Repository Structure
 
@@ -119,8 +119,8 @@ just docker exec -t devel /isaac-sim/python.sh \
 
 | Repository | Role |
 |---|---|
-| [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac) | Isaac Sim Docker environment + `isaac_devkit` framework |
-| [`ycpss91255-docker/robot_model`](https://github.com/ycpss91255-docker/robot_model) | Robot USD/URDF models (private) |
+| [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac) | Isaac Sim Docker environment + `isaac_devkit` framework |
+| [`ycpss91255-lab/robot_model`](https://github.com/ycpss91255-lab/robot_model) | Robot USD/URDF models (private) |
 
 ## License
 

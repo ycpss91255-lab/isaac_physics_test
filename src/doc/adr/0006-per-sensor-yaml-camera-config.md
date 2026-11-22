@@ -6,7 +6,7 @@
 > ADR-0006" section); the per-sensor-type schema itself is replaced by the catalog/placement
 > two-tier model (ADR-0017 section 5 — this is simultaneously the PRD A4 schema replacement).
 > This file is retained unmodified below as the historical record and migrates to
-> `ycpss91255-research/isaac-forklift` together with the application content it exemplifies
+> `ycpss91255-lab/isaac-forklift` together with the application content it exemplifies
 > (tracked in #136).
 
 `isaac_ws` needs to drop a virtual camera onto `forklift_blocky` and publish color + depth + camera_info + TF as ROS 2 topics. Three target hardware variants are on the table:

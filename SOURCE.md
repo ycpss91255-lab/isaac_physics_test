@@ -1,9 +1,9 @@
 # Source Provenance
 
 All files in this repository were extracted from
-[`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac)
+[`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac)
 at commit `c068e3a` (the `main` branch as of 2026-11-17), per the repo
-split tracked in [isaac#309](https://github.com/ycpss91255-docker/isaac/issues/309).
+split tracked in [isaac#309](https://github.com/ycpss91255-lab/isaac/issues/309).
 
 | This repo path | Original path in `isaac@c068e3a` |
 |---|---|
@@ -46,7 +46,7 @@ split tracked in [isaac#309](https://github.com/ycpss91255-docker/isaac/issues/3
 
 Physics-experiment and forklift content that the first extraction left behind
 in `isaac`, moved one concern at a time (tracked in
-[#3](https://github.com/ycpss91255-docker/isaac_physics_test/issues/3)). Extracted from
+[#3](https://github.com/ycpss91255-lab/isaac_physics_test/issues/3)). Extracted from
 `isaac@fa158d0`. Paths are unchanged.
 
 | This repo path | Original path in `isaac@fa158d0` |

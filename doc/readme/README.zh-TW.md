@@ -2,7 +2,7 @@
 
 **[English](../../README.md)** | **[繁體中文](README.zh-TW.md)** | **[简体中文](README.zh-CN.md)** | **[日本語](README.ja.md)**
 
-從 [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac) 依照 repo 拆分計畫（[isaac#309](https://github.com/ycpss91255-docker/isaac/issues/309)）獨立出來的 Isaac Sim 物理實驗與堆高機專用控制腳本。
+從 [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac) 依照 repo 拆分計畫（[isaac#309](https://github.com/ycpss91255-lab/isaac/issues/309)）獨立出來的 Isaac Sim 物理實驗與堆高機專用控制腳本。
 
 本 repo 包含：
 
@@ -16,9 +16,9 @@
 
 ## 前置需求
 
-這些腳本需在從 [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac) 建置的 **Isaac Sim 容器內**執行。該容器提供 Isaac Sim 6.2.0、Isaac Lab v3.0.0 及 `isaac_devkit` 框架。
+這些腳本需在從 [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac) 建置的 **Isaac Sim 容器內**執行。該容器提供 Isaac Sim 6.2.0、Isaac Lab v3.0.0 及 `isaac_devkit` 框架。
 
-機器人模型（USD）位於私有 repo [`ycpss91255-docker/robot_model`](https://github.com/ycpss91255-docker/robot_model)。堆高機方塊模型 USD 在該 repo 的 `usd/origin/forklift_blocky/`；openbase 模型在 `usd/origin/omwr/` 和 `usd/origin/openbase/`。
+機器人模型（USD）位於私有 repo [`ycpss91255-lab/robot_model`](https://github.com/ycpss91255-lab/robot_model)。堆高機方塊模型 USD 在該 repo 的 `usd/origin/forklift_blocky/`；openbase 模型在 `usd/origin/omwr/` 和 `usd/origin/openbase/`。
 
 ## 目錄結構
 
@@ -119,8 +119,8 @@ just docker exec -t devel /isaac-sim/python.sh \
 
 | Repository | 角色 |
 |---|---|
-| [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac) | Isaac Sim Docker 環境 + `isaac_devkit` 框架 |
-| [`ycpss91255-docker/robot_model`](https://github.com/ycpss91255-docker/robot_model) | 機器人 USD/URDF 模型（私有） |
+| [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac) | Isaac Sim Docker 環境 + `isaac_devkit` 框架 |
+| [`ycpss91255-lab/robot_model`](https://github.com/ycpss91255-lab/robot_model) | 機器人 USD/URDF 模型（私有） |
 
 ## License
 

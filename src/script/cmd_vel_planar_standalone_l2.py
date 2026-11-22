@@ -24,7 +24,7 @@ Push cmd_vel from outside:
             ros2 topic pub /cmd_vel geometry_msgs/Twist \
                 "{linear: {x: 0.5}}" -r 10'
 
-Refs: ADR-0008, ycpss91255-docker/isaac#23
+Refs: ADR-0008, ycpss91255-lab/isaac#23
 """
 
 import math
