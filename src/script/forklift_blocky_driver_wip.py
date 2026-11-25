@@ -115,7 +115,7 @@ _log(f"[forklift-Ah] LOG: {LOG_PATH}")
 from isaacsim import SimulationApp  # noqa: E402
 
 # Pin the kit experience to the custom isaacsim.exp.base.python.streaming.kit
-# shipped by ycpss91255-docker/isaac. SimulationApp's default experience
+# shipped by ycpss91255-lab/isaac. SimulationApp's default experience
 # (isaacsim.exp.base.python.kit) lacks WebRTC livestream extensions, so
 # `livestream: 2` alone is a no-op — the streaming server never starts.
 # See ADR-0007 for the rationale.

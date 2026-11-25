@@ -2,7 +2,7 @@
 
 **[English](../../README.md)** | **[繁體中文](README.zh-TW.md)** | **[简体中文](README.zh-CN.md)** | **[日本語](README.ja.md)**
 
-Isaac Sim の物理実験およびフォークリフト専用制御スクリプトを [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac) からリポジトリ分割に基づき抽出したものです（[isaac#309](https://github.com/ycpss91255-docker/isaac/issues/309)）。
+Isaac Sim の物理実験およびフォークリフト専用制御スクリプトを [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac) からリポジトリ分割に基づき抽出したものです（[isaac#309](https://github.com/ycpss91255-lab/isaac/issues/309)）。
 
 本リポジトリの内容：
 
@@ -16,9 +16,9 @@ Isaac Sim の物理実験およびフォークリフト専用制御スクリプ�
 
 ## 前提条件
 
-これらのスクリプトは [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac) からビルドされた **Isaac Sim コンテナ内**で実行します。コンテナには Isaac Sim 6.2.0、Isaac Lab v3.0.0、および `isaac_devkit` フレームワークが含まれています。
+これらのスクリプトは [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac) からビルドされた **Isaac Sim コンテナ内**で実行します。コンテナには Isaac Sim 6.2.0、Isaac Lab v3.0.0、および `isaac_devkit` フレームワークが含まれています。
 
-ロボットモデル（USD）はプライベートリポジトリ [`ycpss91255-docker/robot_model`](https://github.com/ycpss91255-docker/robot_model) に格納されています。フォークリフトブロックモデルの USD は同リポジトリの `usd/origin/forklift_blocky/` に、openbase モデルは `usd/origin/omwr/` および `usd/origin/openbase/` にあります。
+ロボットモデル（USD）はプライベートリポジトリ [`ycpss91255-lab/robot_model`](https://github.com/ycpss91255-lab/robot_model) に格納されています。フォークリフトブロックモデルの USD は同リポジトリの `usd/origin/forklift_blocky/` に、openbase モデルは `usd/origin/omwr/` および `usd/origin/openbase/` にあります。
 
 ## リポジトリ構成
 
@@ -119,8 +119,8 @@ just docker exec -t devel /isaac-sim/python.sh \
 
 | リポジトリ | 役割 |
 |---|---|
-| [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac) | Isaac Sim Docker 環境 + `isaac_devkit` フレームワーク |
-| [`ycpss91255-docker/robot_model`](https://github.com/ycpss91255-docker/robot_model) | ロボット USD/URDF モデル（プライベート） |
+| [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac) | Isaac Sim Docker 環境 + `isaac_devkit` フレームワーク |
+| [`ycpss91255-lab/robot_model`](https://github.com/ycpss91255-lab/robot_model) | ロボット USD/URDF モデル（プライベート） |
 
 ## License
 

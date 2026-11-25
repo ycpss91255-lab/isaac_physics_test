@@ -2,7 +2,7 @@
 
 **[English](../../README.md)** | **[繁體中文](README.zh-TW.md)** | **[简体中文](README.zh-CN.md)** | **[日本語](README.ja.md)**
 
-Isaac Sim 物理实验及叉车专用控制脚本，从 [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac) 按照仓库拆分方案（[isaac#309](https://github.com/ycpss91255-docker/isaac/issues/309)）提取而来。
+Isaac Sim 物理实验及叉车专用控制脚本，从 [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac) 按照仓库拆分方案（[isaac#309](https://github.com/ycpss91255-lab/isaac/issues/309)）提取而来。
 
 本仓库包含：
 
@@ -16,9 +16,9 @@ Isaac Sim 物理实验及叉车专用控制脚本，从 [`ycpss91255-docker/isaa
 
 ## 前置条件
 
-这些脚本在基于 [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac) 构建的 **Isaac Sim 容器内**运行。该容器提供 Isaac Sim 6.2.0、Isaac Lab v3.0.0 以及 `isaac_devkit` 框架。
+这些脚本在基于 [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac) 构建的 **Isaac Sim 容器内**运行。该容器提供 Isaac Sim 6.2.0、Isaac Lab v3.0.0 以及 `isaac_devkit` 框架。
 
-机器人模型（USD）位于私有仓库 [`ycpss91255-docker/robot_model`](https://github.com/ycpss91255-docker/robot_model)。叉车块状模型 USD 位于该仓库的 `usd/origin/forklift_blocky/`；openbase 模型位于 `usd/origin/omwr/` 和 `usd/origin/openbase/`。
+机器人模型（USD）位于私有仓库 [`ycpss91255-lab/robot_model`](https://github.com/ycpss91255-lab/robot_model)。叉车块状模型 USD 位于该仓库的 `usd/origin/forklift_blocky/`；openbase 模型位于 `usd/origin/omwr/` 和 `usd/origin/openbase/`。
 
 ## 仓库结构
 
@@ -119,8 +119,8 @@ just docker exec -t devel /isaac-sim/python.sh \
 
 | 仓库 | 角色 |
 |------|------|
-| [`ycpss91255-docker/isaac`](https://github.com/ycpss91255-docker/isaac) | Isaac Sim Docker 环境 + `isaac_devkit` 框架 |
-| [`ycpss91255-docker/robot_model`](https://github.com/ycpss91255-docker/robot_model) | 机器人 USD/URDF 模型（私有） |
+| [`ycpss91255-lab/isaac`](https://github.com/ycpss91255-lab/isaac) | Isaac Sim Docker 环境 + `isaac_devkit` 框架 |
+| [`ycpss91255-lab/robot_model`](https://github.com/ycpss91255-lab/robot_model) | 机器人 USD/URDF 模型（私有） |
 
 ## 许可证
 

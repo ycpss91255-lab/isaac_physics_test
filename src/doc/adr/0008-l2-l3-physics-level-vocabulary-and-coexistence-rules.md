@@ -5,7 +5,7 @@
 > coexistence rules, and the `<model>_<suffix>` variant naming) remains in force and is
 > restated in generic vocabulary in ADR-0017 ("From ADR-0008" section, camera-bot example).
 > This original file, whose running example is application-specific, is retained unmodified
-> below as the historical record and migrates to `ycpss91255-research/isaac-forklift`
+> below as the historical record and migrates to `ycpss91255-lab/isaac-forklift`
 > (tracked in #136).
 
 ADR-0004 picked "kinematic forklift 5 cube + dynamic environment" but never named the pattern formally. Future Model A variants (升 mast 到 joint-drive、加 wheel 視覺旋轉、openbase 改寫 etc.) 都需要一個 per-body physics level vocabulary 來描述要動哪格、不動哪格,以及描述 PhysX 對 mixed scene 的官方保證。
@@ -65,7 +65,7 @@ PhysX 5.4.1 RigidBodyDynamics 原文把 L2 列為 canonical use cases 的核心:
 ## Consequences
 
 - **CONTEXT.md 新增 L2 / L3 兩詞條**(已更新):未來討論 forklift / openbase / 其他 sim asset 時統一用此詞彙,避免「kinematic vs scripted vs ideal」等模糊用語
-- **openbase L2 migration 完成**(ycpss91255-docker/isaac#23):新增 `openbase_l2.usda` sublayer override(`kinematicEnabled=True` + `disableGravity=True`),`cmd_vel_planar_standalone_l2.py` L2 driver(Euler 積分 + `set_rigid_body_pose`),smoke + 4 項 stability test 全 PASS(pose tracking 0.0000 err, z-drift 0.0000, no NaN, multi-waypoint clean)。原 `move_openbase_planar*.py` 保留作歷史參考(dynamic+velocity-override pattern)
+- **openbase L2 migration 完成**(ycpss91255-lab/isaac#23):新增 `openbase_l2.usda` sublayer override(`kinematicEnabled=True` + `disableGravity=True`),`cmd_vel_planar_standalone_l2.py` L2 driver(Euler 積分 + `set_rigid_body_pose`),smoke + 4 項 stability test 全 PASS(pose tracking 0.0000 err, z-drift 0.0000, no NaN, multi-waypoint clean)。原 `move_openbase_planar*.py` 保留作歷史參考(dynamic+velocity-override pattern)
 - **isaac#16 解除 block**:stability test 已在正規 L2 上跑過 sustained motion;#16 可直接引用此結果或擴展更豐富場景測試
 - **forklift_blocky 不需立刻動**:現況本就是 L2,符合新詞彙、符合 PhysX 官方契約。是否升 L3 是另一個獨立決策,屬未來 ADR(若做)
 - **未來 USD 變體有清晰命名規則**:加新檔不再要新發明字母,直接 `forklift_blocky_<新 suffix>.usda`
