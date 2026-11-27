@@ -1,0 +1,53 @@
+name: CI
+
+# No path or branch filter on pull_request, and no job-level `if:` that
+# excludes merge_group, so every required check also runs in the merge queue.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  merge_group:
+    types: [checks_requested]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  py-compile:
+    name: py-compile
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      # Isaac Sim 6.x ships Kit Python 3.12.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Byte-compile every tracked .py file
+        run: |
+          git ls-files -z '*.py' | xargs -0 python -m py_compile
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+
+  # Single aggregate check for branch protection / merge queue (#17).
+  # Add every new required job to `needs`.
+  ci-rollup:
+    name: ci-rollup
+    if: always()
+    needs: [py-compile]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail unless all needed jobs succeeded
+        env:
+          RESULTS: ${{ join(needs.*.result, ' ') }}
+        run: |
+          echo "needed job results: $RESULTS"
+          for r in $RESULTS; do
+            [ "$r" = "success" ] || { echo "not all jobs succeeded"; exit 1; }
+          done
